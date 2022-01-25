@@ -1,0 +1,59 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(178, 238, 198);
+}
+
+h1{
+    text-align: center;
+}
+
+.options{
+    display:inline-block;
+}
+
+p{
+    margin: 0.4vh;
+    font-weight: bold;
+}
+
+.audioBtn{
+  background-color: #1d681f; /* Green */
+  border: none;
+  color: white;
+  padding: 1vh;
+  margin: 1vh;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.generalUtterances{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    margin-left: 20vw;
+}
+
+.solutions{
+    display:flex;
+    flex-direction: row;
+    margin-left: 10vh;
+    padding-left: 30vh;
+    margin-top: 40vh;
+
+}
+.Nr{
+    margin-top: 2vh;
+}
+.numberInput{
+    border-radius: 15px;
+    height: 4vh;
+    width: 5vw;
+    margin-top: 0.6vh;
+    font-size: 3.5vh;
+    text-align: center;
+}
+

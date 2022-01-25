@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study Buddy Wizard</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Study Buddy Wizard</h1>
+    <div class="options">
+        <div class="generalUtterances">
+            <p>Introduction:</p>
+            <button id="IntroductionSystem", class="audioBtn">Intro System</button>
+            <button id="IntroductionUser", class="audioBtn">Intro User</button>
+            <p>General:</p>
+            <button id="helpBtn", class="audioBtn">How can I help?</button>
+            <button id="notDefined", class="audioBtn">Error message</button>
+            <p>Functions:</p>
+            <button id="optionsSystem", class="audioBtn">Options system</button>
+            <button id="optionsUser", class="audioBtn">Options user</button>
+            <p>System-initiative:</p>
+            <button id="createSentence", class="audioBtn">Can you create a sentence?</button>
+            <button id="createMeaning", class="audioBtn">Can you give the meaning?</button>
+            <button id="pronounceWord", class="audioBtn"> Can you pronounce the word?</button>
+            <p>Evaluation:</p>
+            <button id="correct", class="audioBtn">correct</button>
+            <button id="incorrect", class="audioBtn">incorrect</button>
+            <p>Outro:</p>
+            <button id="outro", class="audioBtn">Outro</button>
+
+
+        </div>
+        <div class="solutions">
+            <p class= "Nr">Vocab Nr.: &nbsp;</p>
+            <input type="text" id="vocabId" class="numberInput">
+            <button id="pronunciation", class="audioBtn">pronunciation</button>
+            <button id="sentence", class="audioBtn">sentence</button>
+            <button id="meaning", class="audioBtn">meaning</button>
+            <button id="hint1", class="audioBtn">hint 1</button>
+            <button id="hint2", class="audioBtn">hint 2</button>
+            <button id="hint3", class="audioBtn">hint 3</button>
+        </div>
+    </div>
+    
+	
+	
+		
+</body>
+<script type="module" src="studyBuddy.js" defer></script>
+</html>
