@@ -61,32 +61,26 @@ outro.addEventListener("click",function(){
 pronunciation.addEventListener("click",function(){
     vocabNum = vocabId.value;
     playUtterance("pronunciation");
-    console.log("Current Nr Input: " + vocabNum);
 });
 sentence.addEventListener("click",function(){
     vocabNum = vocabId.value;
     playUtterance("sentence");
-    console.log("Current Nr Input: " + vocabNum);
 });
 meaning.addEventListener("click",function(){
     vocabNum = vocabId.value;
     playUtterance("meaning");
-    console.log("Current Nr Input: " + vocabNum);
 });
 hint1.addEventListener("click",function(){
     vocabNum = vocabId.value;
     playUtterance("hint 1");
-    console.log("Current Nr Input: " + vocabNum);
 });
 hint2.addEventListener("click",function(){
     vocabNum = vocabId.value;
     playUtterance("hint 2");
-    console.log("Current Nr Input: " + vocabNum);
 });
 hint3.addEventListener("click",function(){
     vocabNum = vocabId.value;
     playUtterance("hint 3");
-    console.log("Current Nr Input: " + vocabNum);
 });
 
 
@@ -94,6 +88,12 @@ hint3.addEventListener("click",function(){
 
 
 function playUtterance(utterance){
-    console.log(utterance);
+    var synth = window.speechSynthesis,
+    voices = window.speechSynthesis.getVoices(),
+    msg = new SpeechSynthesisUtterance(utterance);
+    msg.lang = 'en-UK';                            
+    msg.rate = 1.25;
+    msg.voice = voices[6]; //4 female 6 male
+    synth.speak(msg);
 }
 
