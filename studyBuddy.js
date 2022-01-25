@@ -1,3 +1,5 @@
+import Config from "./Config.js";
+
 var introS = document.getElementById("IntroductionSystem"),
 introU = document.getElementById("IntroductionUser"),
 notDefined = document.getElementById("notDefined"),
@@ -82,42 +84,42 @@ var vocabList = [
 
 
 introS.addEventListener("click",function(){
-    playUtterance("introS");
+    playUtterance(Config.INTRO_SYSTEM);
 });
 
 introU.addEventListener("click",function(){
-    playUtterance("introU");
+    playUtterance(Config.INTRO_USER);
 });
 
 notDefined.addEventListener("click",function(){
-    playUtterance("not Defined");
+    playUtterance(Config.NOT_DEFINED);
 });
 helpBtn.addEventListener("click",function(){
-    playUtterance("help");
+    playUtterance(Config.CAN_I_HELP);
 });
 optionsSystem.addEventListener("click",function(){
-    playUtterance("optionsS");
+    playUtterance(Config.OPTIONS_SYTEM);
 });
 optionsUser.addEventListener("click",function(){
-    playUtterance("optionsU");
+    playUtterance(Config.OPTIONS_USER);
 });
 createSentence.addEventListener("click",function(){
-    playUtterance("sentence request");
+    playUtterance(Config.REQUEST_SENTENCE);
 });
 pronounceWord.addEventListener("click",function(){
-    playUtterance("pronunciation request");
+    playUtterance(Config.REQUEST_PRONUNCIATION);
 });
 createMeaning.addEventListener("click",function(){
-    playUtterance("meaning request");
+    playUtterance(Config.REQUEST_MEANING);
 });
 correct.addEventListener("click",function(){
-    playUtterance("correct");
+    playUtterance(Config.CORRECT);
 });
 incorrect.addEventListener("click",function(){
-    playUtterance("incorrect");
+    playUtterance(Config.INCORRECT);
 });
 outro.addEventListener("click",function(){
-    playUtterance("outro");
+    playUtterance(Config.OUTRO);
 });
 pronunciation.addEventListener("click",function(){
     vocabNum = vocabId.value;
