@@ -30,6 +30,10 @@ p{
   border-radius: 5px;
 }
 
+#IntroductionUser, #optionsUser{
+    background-color: coral;
+}
+
 .generalUtterances{
     display: flex;
     flex-direction: column;
