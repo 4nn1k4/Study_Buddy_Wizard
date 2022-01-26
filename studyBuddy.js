@@ -5,10 +5,12 @@ introU = document.getElementById("IntroductionUser"),
 notDefined = document.getElementById("notDefined"),
 helpBtn = document.getElementById("helpBtn"),
 optionsSystem = document.getElementById("optionsSystem"),
+furtherhelp = document.getElementById("furtherHelp"),
 optionsUser = document.getElementById("optionsUser"),
 createSentence = document.getElementById("createSentence"),
 createMeaning = document.getElementById("createMeaning"),
 pronounceWord = document.getElementById("pronounceWord"),
+nextWord = document.getElementById("nextWord"),
 correct = document.getElementById("correct"),
 incorrect = document.getElementById("incorrect"),
 outro = document.getElementById("outro"),
@@ -103,6 +105,9 @@ optionsSystem.addEventListener("click",function(){
 optionsUser.addEventListener("click",function(){
     playUtterance(Config.OPTIONS_USER);
 });
+furtherhelp.addEventListener("click",function(){
+    playUtterance(Config.FURTHER_HELP);
+});
 createSentence.addEventListener("click",function(){
     playUtterance(Config.REQUEST_SENTENCE);
 });
@@ -111,6 +116,9 @@ pronounceWord.addEventListener("click",function(){
 });
 createMeaning.addEventListener("click",function(){
     playUtterance(Config.REQUEST_MEANING);
+});
+nextWord.addEventListener("click",function(){
+    playUtterance(Config.NEXT_WORD);
 });
 correct.addEventListener("click",function(){
     playUtterance(Config.CORRECT);
