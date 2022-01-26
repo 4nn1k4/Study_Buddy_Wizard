@@ -1,5 +1,5 @@
 var Config = {
-    INTRO_SYSTEM: "Intro S",
+    INTRO_SYSTEM: "Hi, nice to meet you",
     INTRO_USER: "Intro U",
     OPTIONS_SYTEM: "o s",
     OPTIONS_USER: "o u",
@@ -15,4 +15,9 @@ var Config = {
     OUTRO: "outro"
 };
 
+/**
+ * evtl button incorrect in aufteilen & 2 Buttons draus machen:
+ * 1) incorrect: Soll ich die Vokabel hinten anstellen und später darauf zurückkomen?
+ * 2) incorrect: ich glaube, du benötigst noch etwas Hilfe bei diesem Wort. Soll ich dir auf eine andere Art & Weise bei dem Wort helfen?
+ */
 export default Config;
