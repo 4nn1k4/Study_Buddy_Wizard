@@ -30,8 +30,12 @@ p{
   border-radius: 5px;
 }
 
-#IntroductionUser, #optionsUser{
-    background-color: coral;
+#IntroductionUser, #optionsUser, #helpBtn{
+    background-color: rgb(255, 127, 80);
+}
+
+#notDefined, #outro, #pronunciation, #sentence, #meaning, #hint1, #hint2, #hint3{
+    background-color: rgba(0, 0, 0, 0.959);
 }
 
 .generalUtterances{

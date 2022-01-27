@@ -4,15 +4,15 @@ var Config = {
     OPTIONS_SYTEM: "o s",
     OPTIONS_USER: "o u",
     CAN_I_HELP: "How can I help you?",
-    NOT_DEFINED: "Sorry ...",
-    FURTHER_HELP: "Do you need more help with this word?",
-    REQUEST_SENTENCE: "request Sentence",
-    REQUEST_MEANING: "request meaning",
-    REQUEST_PRONUNCIATION: "request pron",
+    NOT_DEFINED: "Sorry, I did not understand, please try again or ask for my functions",
+    FURTHER_HELP: "Please ask, if you need help",
+    REQUEST_SENTENCE: "Can you build a sentence?",
+    REQUEST_MEANING: "Can you define the meaning of the word?",
+    REQUEST_PRONUNCIATION: "Please pronounce the word",
     NEXT_WORD: "I think you know enough about this word. Let's learn another word",
     CORRECT: "correct",
-    INCORRECT: "incorrect",
-    OUTRO: "outro"
+    INCORRECT: "incorrect, you can try again or ask for an hint",
+    OUTRO: "good bye"
 };
 
 /**
