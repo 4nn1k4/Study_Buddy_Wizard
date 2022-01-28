@@ -9,7 +9,7 @@ var Config = {
     REQUEST_SENTENCE: "Can you build a sentence?",
     REQUEST_MEANING: "Can you define the meaning of the word?",
     REQUEST_PRONUNCIATION: "Please pronounce the word",
-    NEXT_WORD: "I think you know enough about this word. Let's learn another word",
+    NEXT_WORD: "the correct answer is, ",
     CORRECT: "correct",
     INCORRECT: "incorrect, you can try again or ask for an hint",
     OUTRO: "good bye"
