@@ -164,7 +164,7 @@ function playUtterance(utterance){
     msg = new SpeechSynthesisUtterance(utterance);
     msg.lang = 'en-UK';                            
     msg.rate = 1.1;
-    msg.voice = voices[1]; //4 female 6 male
+    msg.voice = voices[6]; //4 female 6 male
     synth.speak(msg);
 }
 
