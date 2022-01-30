@@ -1,10 +1,12 @@
 import Config from "./Config.js";
 
 var introS = document.getElementById("IntroductionSystem"),
+introS2 = document.getElementById("IntroductionSystem2"),
 introU = document.getElementById("IntroductionUser"),
 notDefined = document.getElementById("notDefined"),
 helpBtn = document.getElementById("helpBtn"),
 optionsSystem = document.getElementById("optionsSystem"),
+optionsSystem2 = document.getElementById("optionsSystem"),
 furtherhelp = document.getElementById("furtherHelp"),
 optionsUser = document.getElementById("optionsUser"),
 createSentence = document.getElementById("createSentence"),
@@ -89,6 +91,10 @@ introS.addEventListener("click",function(){
     playUtterance(Config.INTRO_SYSTEM);
 });
 
+introS2.addEventListener("click",function(){
+    playUtterance(Config.INTRO_SYSTEM2);
+});
+
 introU.addEventListener("click",function(){
     playUtterance(Config.INTRO_USER);
 });
@@ -101,6 +107,9 @@ helpBtn.addEventListener("click",function(){
 });
 optionsSystem.addEventListener("click",function(){
     playUtterance(Config.OPTIONS_SYTEM);
+});
+optionsSystem2.addEventListener("click",function(){
+    playUtterance(Config.OPTIONS_SYTEM2);
 });
 optionsUser.addEventListener("click",function(){
     playUtterance(Config.OPTIONS_USER);
@@ -163,9 +172,11 @@ function playUtterance(utterance){
     voices = window.speechSynthesis.getVoices(),
     msg = new SpeechSynthesisUtterance(utterance);
     msg.lang = 'en-UK';                            
-    msg.rate = 1.1;
+    msg.rate = 0.95;
     msg.voice = voices[6]; //4 female 6 male
+    console.log(msg);
     synth.speak(msg);
+    
 }
 
 
