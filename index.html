@@ -11,14 +11,14 @@
     <div class="options">
         <div class="generalUtterances">
             <p>Introduction:</p>
-            <span><button id="IntroductionSystem", class="audioBtn">Intro System</button><button id="IntroductionSystem2", class="audioBtn">continue</button></span>
+            <button id="IntroductionSystem", class="audioBtn">Intro System</button>
             <button id="IntroductionUser", class="audioBtn">Intro User</button>
             <p>General:</p>
             <button id="furtherHelp", class="audioBtn"> Please ask for help</button>
             <button id="helpBtn", class="audioBtn">How can I help?</button>
             <button id="notDefined", class="audioBtn">Error message</button>
             <p>Functions:</p>
-            <span><button id="optionsSystem", class="audioBtn">Options system</button><button id="optionsSystem2", class="audioBtn">continue</button></span>
+            <button id="optionsSystem", class="audioBtn">Options system</button>
             <button id="optionsUser", class="audioBtn">Options user</button>
             <p>System-initiative:</p>
             <button id="createSentence", class="audioBtn">Can you create a sentence?</button>
@@ -26,8 +26,7 @@
             <button id="pronounceWord", class="audioBtn"> Can you pronounce the word?</button>
             <button id="nextWord", class="audioBtn"> The correct answer is ... </button>
             <p>Evaluation:</p>
-            <button id="correct", class="audioBtn">correct</button>
-            <button id="incorrect", class="audioBtn">incorrect</button>
+            <span><button id="correct", class="audioBtn">correct</button><button id="halfcorrect", class="audioBtn">half right</button><button id="incorrect", class="audioBtn">incorrect</button></span>
             <p>Outro:</p>
             <button id="outro", class="audioBtn">Outro</button>
 
@@ -35,7 +34,8 @@
         </div>
         <div class="solutions">
             <p class= "Nr">Vocab Nr.: &nbsp;</p>
-            <input type="text" id="vocabId" class="numberInput">
+            <select id="selectVocab" class="selectBtn"></select>
+            <!--<input type="text" id="vocabId" class="numberInput">-->
             <button id="pronunciation", class="audioBtn">pronunciation</button>
             <button id="sentence", class="audioBtn">sentence</button>
             <button id="meaning", class="audioBtn">meaning</button>
@@ -51,3 +51,5 @@
 </body>
 <script type="module" src="studyBuddy.js" defer></script>
 </html>
+
+ <!--<button id="optionsSystem2", class="audioBtn">continue</button>--><!--<button id="IntroductionSystem2", class="audioBtn">continue</button>-->

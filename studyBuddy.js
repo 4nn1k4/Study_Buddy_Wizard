@@ -1,12 +1,12 @@
 import Config from "./Config.js";
 
 var introS = document.getElementById("IntroductionSystem"),
-introS2 = document.getElementById("IntroductionSystem2"),
+//introS2 = document.getElementById("IntroductionSystem2"),
 introU = document.getElementById("IntroductionUser"),
 notDefined = document.getElementById("notDefined"),
 helpBtn = document.getElementById("helpBtn"),
 optionsSystem = document.getElementById("optionsSystem"),
-optionsSystem2 = document.getElementById("optionsSystem"),
+//optionsSystem2 = document.getElementById("optionsSystem"),
 furtherhelp = document.getElementById("furtherHelp"),
 optionsUser = document.getElementById("optionsUser"),
 createSentence = document.getElementById("createSentence"),
@@ -14,16 +14,30 @@ createMeaning = document.getElementById("createMeaning"),
 pronounceWord = document.getElementById("pronounceWord"),
 nextWord = document.getElementById("nextWord"),
 correct = document.getElementById("correct"),
+halfcorrect = document.getElementById("halfcorrect"),
 incorrect = document.getElementById("incorrect"),
 outro = document.getElementById("outro"),
-vocabId = document.getElementById("vocabId"),
+//vocabId = document.getElementById("vocabId"),
 pronunciation = document.getElementById("pronunciation"),
 sentence = document.getElementById("sentence"),
 meaning = document.getElementById("meaning"),
 hint1 = document.getElementById("hint1"),
 hint2 = document.getElementById("hint2"),
 hint3 = document.getElementById("hint3"),
+vocabSelector = document.getElementById("selectVocab"),
+vocabList = ["name", "accumulate", " name", "upheaval", "name", "rectify", "subsidy", "feasible", "name", "alleged", "adverse", "detrimental", "quaint", "endow", "serene", "deter", "scrutiny", "famine", "adjacent", "surplus", "braggadocio", "pule", "sparge", "captious", "bibulous", "embonpoint", "tenebrous", "parlay", "legerdemain", "deracinate"],
 vocabNum = 0;
+
+for(let i = 0; i < 30; i++){
+    let vocabOption = document.createElement('option');
+    vocabOption.textContent = vocabList[i];
+    vocabSelector.appendChild(vocabOption);
+    if(i == 10 || i == 20){
+        vocabOption = document.createElement('option');
+        vocabOption.textContent = "-----------------";
+        vocabSelector.appendChild(vocabOption);
+    }
+}
 
 class Vocab{
     constructor(id, name, sen, mean, h1, h2, h3){
@@ -88,83 +102,116 @@ var vocabList = [
 
 
 introS.addEventListener("click",function(){
-    playUtterance(Config.INTRO_SYSTEM);
+    playUtteranceGerman(Config.INTRO_SYSTEM);
 });
 
-introS2.addEventListener("click",function(){
-    playUtterance(Config.INTRO_SYSTEM2);
-});
 
 introU.addEventListener("click",function(){
-    playUtterance(Config.INTRO_USER);
+    playUtteranceGerman(Config.INTRO_USER);
 });
 
 notDefined.addEventListener("click",function(){
-    playUtterance(Config.NOT_DEFINED);
+    playUtteranceGerman(Config.NOT_DEFINED);
 });
 helpBtn.addEventListener("click",function(){
-    playUtterance(Config.CAN_I_HELP);
+    playUtteranceGerman(Config.CAN_I_HELP);
 });
 optionsSystem.addEventListener("click",function(){
-    playUtterance(Config.OPTIONS_SYTEM);
+    playUtteranceGerman(Config.OPTIONS_SYTEM);
 });
-optionsSystem2.addEventListener("click",function(){
-    playUtterance(Config.OPTIONS_SYTEM2);
-});
+
 optionsUser.addEventListener("click",function(){
-    playUtterance(Config.OPTIONS_USER);
+    playUtteranceGerman(Config.OPTIONS_USER);
 });
 furtherhelp.addEventListener("click",function(){
-    playUtterance(Config.FURTHER_HELP);
+    playUtteranceGerman(Config.FURTHER_HELP);
 });
 createSentence.addEventListener("click",function(){
-    playUtterance(Config.REQUEST_SENTENCE);
+    playUtteranceGerman(Config.REQUEST_SENTENCE);
 });
 pronounceWord.addEventListener("click",function(){
-    playUtterance(Config.REQUEST_PRONUNCIATION);
+    playUtteranceGerman(Config.REQUEST_PRONUNCIATION);
 });
 createMeaning.addEventListener("click",function(){
-    playUtterance(Config.REQUEST_MEANING);
+    playUtteranceGerman(Config.REQUEST_MEANING);
 });
 nextWord.addEventListener("click",function(){
-    playUtterance(Config.NEXT_WORD);
+    playUtteranceGerman(Config.NEXT_WORD);
 });
 correct.addEventListener("click",function(){
-    playUtterance(Config.CORRECT);
+    playUtteranceGerman(Config.CORRECT);
+});
+halfcorrect.addEventListener("click",function(){
+    playUtteranceGerman(Config.HALF_CORRECT);
 });
 incorrect.addEventListener("click",function(){
-    playUtterance(Config.INCORRECT);
+    playUtteranceGerman(Config.INCORRECT);
 });
 outro.addEventListener("click",function(){
-    playUtterance(Config.OUTRO);
+    playUtteranceGerman(Config.OUTRO);
 });
 pronunciation.addEventListener("click",function(){
-    vocabNum = vocabId.value;
-    playUtterance(vocabList[vocabNum-1].name);
+    vocabNum = vocabSelector.value;
+    for(let i= 0; i <30; i++){
+        if(vocabList[i].name == vocabSelector.value){
+            playUtterance(vocabList[i].name);
+        }
+    }
 });
 sentence.addEventListener("click",function(){
-    vocabNum = vocabId.value;
-    playUtterance(vocabList[vocabNum-1].sen);
+    vocabNum = vocabSelector.value;
+    for(let i= 0; i <30; i++){
+        if(vocabList[i].name == vocabSelector.value){
+            playUtterance(vocabList[i].sen);
+        }
+    }
 });
 meaning.addEventListener("click",function(){
-    vocabNum = vocabId.value;
-    playUtterance(vocabList[vocabNum-1].mean);
+    vocabNum = vocabSelector.value;
+    for(let i= 0; i <30; i++){
+        if(vocabList[i].name == vocabSelector.value){
+            playUtterance(vocabList[i].mean);
+        }
+    }
 });
 hint1.addEventListener("click",function(){
-    vocabNum = vocabId.value;
-    playUtterance(vocabList[vocabNum-1].h1);
+    vocabNum = vocabSelector.value;
+    for(let i= 0; i <30; i++){
+        if(vocabList[i].name == vocabSelector.value){
+            playUtterance(vocabList[i].h1);
+        }
+    }
 });
 hint2.addEventListener("click",function(){
-    vocabNum = vocabId.value;
-    playUtterance(vocabList[vocabNum-1].h2);
+    vocabNum = vocabSelector.value;
+    for(let i= 0; i <30; i++){
+        if(vocabList[i].name == vocabSelector.value){
+            playUtterance(vocabList[i].h2);
+        }
+    }
 });
 hint3.addEventListener("click",function(){
-    vocabNum = vocabId.value;
-    playUtterance(vocabList[vocabNum-1].h3);
+    vocabNum = vocabSelector.value;
+    for(let i= 0; i <30; i++){
+        if(vocabList[i].name == vocabSelector.value){
+            playUtterance(vocabList[i].h3);
+        }
+    }
 });
 
 
 
+function playUtteranceGerman(utterance){
+    var synth = window.speechSynthesis,
+    voices = window.speechSynthesis.getVoices(),
+    msg = new SpeechSynthesisUtterance(utterance);
+    console.log(voices);
+    msg.lang = 'de-DE';                            
+    msg.rate = 0.9;
+    msg.voice = voices[2]; //4 female 6 male
+    console.log(msg);
+    synth.speak(msg);
+}
 
 
 function playUtterance(utterance){
@@ -172,11 +219,10 @@ function playUtterance(utterance){
     voices = window.speechSynthesis.getVoices(),
     msg = new SpeechSynthesisUtterance(utterance);
     msg.lang = 'en-UK';                            
-    msg.rate = 0.95;
+    msg.rate = 0.9;
     msg.voice = voices[6]; //4 female 6 male
     console.log(msg);
     synth.speak(msg);
-    
 }
 
 
