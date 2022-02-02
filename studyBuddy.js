@@ -32,7 +32,7 @@ for(let i = 0; i < 30; i++){
     let vocabOption = document.createElement('option');
     vocabOption.textContent = vocabList[i];
     vocabSelector.appendChild(vocabOption);
-    if(i == 10 || i == 20){
+    if(i == 9 || i == 19){
         vocabOption = document.createElement('option');
         vocabOption.textContent = "-----------------";
         vocabSelector.appendChild(vocabOption);
