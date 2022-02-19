@@ -44,7 +44,7 @@ p{
 }
 .audioBtn:hover {background-color: #bebebe}
 .selectBtn{
-    background-color: #a5d15f; /* Green */
+    background-color: rgba(69, 216, 204, 0.959); /* Green */
     border: none;
     color: rgb(0, 0, 0);
     padding: 1vh;
