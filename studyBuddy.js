@@ -25,7 +25,7 @@ hint1 = document.getElementById("hint1"),
 hint2 = document.getElementById("hint2"),
 hint3 = document.getElementById("hint3"),
 vocabSelector = document.getElementById("selectVocab"),
-vocabList = ["name", "accumulate", " name", "upheaval", "name", "rectify", "subsidy", "feasible", "name", "alleged", "adverse", "detrimental", "quaint", "endow", "serene", "deter", "scrutiny", "famine", "adjacent", "surplus", "braggadocio", "pule", "sparge", "captious", "bibulous", "embonpoint", "tenebrous", "parlay", "legerdemain", "deracinate"],
+vocabList = ["itinerary", "accumulate", "solicitor", "upheaval", "liability", "rectify", "subsidy", "feasible", "surge", "alleged", "adverse", "detrimental", "quaint", "endow", "serene", "deter", "scrutiny", "famine", "adjacent", "surplus", "braggadocio", "pule", "sparge", "captious", "bibulous", "embonpoint", "tenebrous", "parlay", "legerdemain", "deracinate"],
 vocabNum = 0;
 
 for(let i = 0; i < 30; i++){
@@ -207,7 +207,7 @@ function playUtteranceGerman(utterance){
     msg = new SpeechSynthesisUtterance(utterance);
     console.log(voices);
     msg.lang = 'de-DE';                            
-    msg.rate = 0.9;
+    msg.rate = 0.8;
     msg.voice = voices[2]; //4 female 6 male
     console.log(msg);
     synth.speak(msg);
@@ -219,7 +219,7 @@ function playUtterance(utterance){
     voices = window.speechSynthesis.getVoices(),
     msg = new SpeechSynthesisUtterance(utterance);
     msg.lang = 'en-UK';                            
-    msg.rate = 0.9;
+    msg.rate = 0.75;
     msg.voice = voices[6]; //4 female 6 male
     console.log(msg);
     synth.speak(msg);
