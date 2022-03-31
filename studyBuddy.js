@@ -208,7 +208,7 @@ function playUtteranceGerman(utterance){
     console.log(voices);
     msg.lang = 'de-DE';                            
     msg.rate = 0.8;
-    msg.voice = voices[2]; //4 female 6 male
+    msg.voice = voices[4]; //4 female 6 male
     console.log(msg);
     synth.speak(msg);
 }
@@ -220,7 +220,7 @@ function playUtterance(utterance){
     msg = new SpeechSynthesisUtterance(utterance);
     msg.lang = 'en-UK';                            
     msg.rate = 0.75;
-    msg.voice = voices[6]; //4 female 6 male
+    msg.voice = voices[4]; //4 female 6 male
     console.log(msg);
     synth.speak(msg);
 }
