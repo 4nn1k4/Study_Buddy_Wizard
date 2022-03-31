@@ -1,12 +1,10 @@
 import Config from "./Config.js";
 
 var introS = document.getElementById("IntroductionSystem"),
-//introS2 = document.getElementById("IntroductionSystem2"),
 introU = document.getElementById("IntroductionUser"),
 notDefined = document.getElementById("notDefined"),
 helpBtn = document.getElementById("helpBtn"),
 optionsSystem = document.getElementById("optionsSystem"),
-//optionsSystem2 = document.getElementById("optionsSystem"),
 furtherhelp = document.getElementById("furtherHelp"),
 optionsUser = document.getElementById("optionsUser"),
 createSentence = document.getElementById("createSentence"),
@@ -17,7 +15,6 @@ correct = document.getElementById("correct"),
 halfcorrect = document.getElementById("halfcorrect"),
 incorrect = document.getElementById("incorrect"),
 outro = document.getElementById("outro"),
-//vocabId = document.getElementById("vocabId"),
 pronunciation = document.getElementById("pronunciation"),
 sentence = document.getElementById("sentence"),
 meaning = document.getElementById("meaning"),
@@ -208,7 +205,7 @@ function playUtteranceGerman(utterance){
     console.log(voices);
     msg.lang = 'de-DE';                            
     msg.rate = 0.8;
-    msg.voice = voices[4]; //4 female 6 male
+    msg.voice = voices[2]; //4 female 6 male
     console.log(msg);
     synth.speak(msg);
 }
@@ -220,11 +217,9 @@ function playUtterance(utterance){
     msg = new SpeechSynthesisUtterance(utterance);
     msg.lang = 'en-UK';                            
     msg.rate = 0.75;
-    msg.voice = voices[4]; //4 female 6 male
+    msg.voice = voices[6]; //4 female 6 male
     console.log(msg);
     synth.speak(msg);
 }
-
-
 
 
